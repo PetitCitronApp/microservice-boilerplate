@@ -1,0 +1,6 @@
+/dist
+/docker/database/data
+/node_modules
+.env
+package-lock.json
+
