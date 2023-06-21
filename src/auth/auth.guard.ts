@@ -24,6 +24,8 @@ import { IS_PUBLIC_KEY } from './public.decorator';
         context.getClass(),
       ]);
       if (isPublic) {
+        console.log('should trigger compilation');
+
         // 💡 See this condition
         return true;
       }
