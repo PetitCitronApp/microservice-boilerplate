@@ -4,11 +4,12 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '.development.env',
+      envFilePath: '.env',
       isGlobal: true
     }),
     AuthModule,
@@ -16,7 +17,7 @@ import { ThrottlerModule } from '@nestjs/throttler';
       ttl: 60,
       limit: 150,
     }),
-
+    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
