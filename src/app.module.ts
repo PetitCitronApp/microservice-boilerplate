@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
@@ -17,7 +18,7 @@ import { DatabaseModule } from './database/database.module';
       ttl: 60,
       limit: 150,
     }),
-    DatabaseModule,
+    DatabaseModule
   ],
   controllers: [AppController],
   providers: [AppService],
