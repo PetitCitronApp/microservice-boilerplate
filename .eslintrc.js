@@ -26,6 +26,7 @@ module.exports = {
       argsIgnorePattern: "^_",
     }],
     "import/extensions": ["error", "never"],
+    "import/prefer-default-export": "off",
   },
   overrides: [
     // package.json configurations
